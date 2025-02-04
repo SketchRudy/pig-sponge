@@ -33,7 +33,26 @@ public class Sponge {
 
   // Implement your solution here!
   public static String spongeCase(String sentence) {
-    return null;
+    // For loop iterating through the sentence
+    // Modulus operator for the character index, if even, make lowercase, if odd, make uppercase
+
+    String result = "";
+    String[] words = sentence.split(" ");
+
+
+    for (String word : words) {
+      for (int i = 0; i < word.length(); i++) {
+        // Makes every even character lowercase
+        if (i % 2 == 0) {
+          result += Character.toLowerCase(word.charAt(i));
+        } else {
+          // Makes ever odd character odd
+          result += Character.toUpperCase(word.charAt(i));
+        }
+      }
+      result += " ";
+    }
+    return result.trim();
   }
 
 

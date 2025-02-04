@@ -31,7 +31,7 @@ public class Pig {
         StringBuilder endResult = new StringBuilder();
 
         // Skip the empty words in the array
-        for (String word : splitWords) {
+        for (String word : splitWords) {    
             if (word.isEmpty()) {
                 continue; 
             }
