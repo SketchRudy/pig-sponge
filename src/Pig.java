@@ -26,7 +26,27 @@ public class Pig {
 
     // Implement your solution here!
     public static String pigLatin(String sentence) {
-        return null;
+        // Array of split words
+        String[] splitWords = sentence.toLowerCase().split(" ");
+        StringBuilder endResult = new StringBuilder();
+
+        // Skip the empty words in the array
+        for (String word : splitWords) {
+            if (word.isEmpty()) {
+                continue; 
+            }
+
+            char firstLetter = word.charAt(0); // get first letter
+            if ("aeiou".indexOf(firstLetter) != -1) {
+                endResult.append(word);
+            }
+            else {
+                endResult.append(word.substring(1)).append(firstLetter).append("ay");
+            }
+            endResult.append(" ");
+        } 
+
+        return endResult.toString().trim();
     }
 
 
