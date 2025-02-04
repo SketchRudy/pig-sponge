@@ -41,8 +41,10 @@ public class Pig {
                 endResult.append(word);
             }
             else {
+                // Move first letter to end and add "ay"
                 endResult.append(word.substring(1)).append(firstLetter).append("ay");
             }
+            // Add space between words
             endResult.append(" ");
         } 
 
